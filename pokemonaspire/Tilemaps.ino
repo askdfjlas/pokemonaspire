@@ -2,15 +2,13 @@
 #include "Sprites.h"
 #include "Tilemaps.h"
 
-void loadTilemap(tileMapData T, byte* spriteMap, byte* collisionMap) {
+void loadTilemap(tileMapData T, byte* spriteMap) {
+  free(currentTilemap.spriteMap); 
+  
   currentTilemap.spriteMap = calloc(T.dimY*T.dimX, sizeof(byte)); 
-  currentTilemap.collisionMap = calloc(T.dimY*T.dimX, sizeof(byte)); 
 
   for(int i = 0; i < T.dimX*T.dimY; i++)
     currentTilemap.spriteMap[i] = pgm_read_byte(spriteMap + i); 
-
-  for(int i = 0; i < T.dimX*T.dimY; i++)
-    currentTilemap.collisionMap[i] = pgm_read_byte(collisionMap + i); 
  
   currentTilemap.dimX = T.dimX;
   currentTilemap.dimY = T.dimY; 
@@ -34,6 +32,12 @@ char* getTile(byte num) {
       return Tile2;
     case 2:
       return Tile3;
+    case 3:
+      return Tile4;
+    case 4:
+      return Tile5;
+     case 5:
+      return Tile6; 
   }
 }
 

@@ -28,7 +28,6 @@ typedef struct loadedTilemap {
   byte dimY; 
   
   byte* spriteMap;
-  byte* collisionMap; 
 
   struct Tilemap* Exit1; 
   struct Tilemap* Exit2;
@@ -47,36 +46,23 @@ loadedTileMap currentTilemap;
 // Prototypes
 void drawMap();
 char* getTile(byte num);
-void loadTilemap(tileMapData T, byte* spriteMap, byte* collisionMap);
+void loadTilemap(tileMapData T, byte* spriteMap);
 
 // Sprite maps
 const byte S1[] PROGMEM = 
-{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
-1, 2, 2, 1, 2, 2, 2, 2, 2, 1,
-1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 
-1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 
-1, 2, 2, 1, 2, 2, 2, 2, 2, 1,
-1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 
-1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 
-1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 
-1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 
-1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+{1, 1, 1, 1, 1, 1, 1, 1, 1,
+1, 3, 3, 3, 3, 3, 3, 3, 1,
+1, 2, 2, 2, 2, 2, 2, 2, 1, 
+1, 2, 2, 2, 2, 2, 2, 2, 1,
+1, 2, 2, 2, 2, 2, 2, 2, 1,
+1, 2, 2, 2, 2, 2, 2, 2, 1, 
+1, 2, 2, 2, 2, 2, 2, 5, 1,
+1, 2, 2, 2, 2, 2, 2, 4, 1, 
+1, 1, 1, 1, 1, 1, 1, 1, 1}; 
 
-// Collision maps
-const byte C1[] PROGMEM = 
-{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
-1, 0, 0, 1, 0, 0, 0, 0, 0, 1,
-1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 
-1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 
-1, 0, 0, 1, 0, 0, 0, 0, 0, 1,
-1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 
-1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 
-1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 
-1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 
-1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
 // Map Data
-const tileMapData T1 PROGMEM = {10, 10, NULL, NULL, NULL, 1, 1, 0, 0, 0, 0}; 
+const tileMapData T1 PROGMEM = {9, 9, NULL, NULL, NULL, 1, 2, 0, 0, 0, 0}; 
 
 
 #endif

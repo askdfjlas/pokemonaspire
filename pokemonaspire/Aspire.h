@@ -4,7 +4,6 @@
 #include <Arduboy2.h>
 
 Arduboy2 arduboy;
-Sprites sprites;
 
 #define ARDBITMAP_SBUF arduboy.getBuffer()
 #include <ArdBitmap.h>

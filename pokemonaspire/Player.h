@@ -9,9 +9,7 @@
 // Prototypes
 void playerMovement();  
 void drawPlayer(); 
-void getInputs(); 
 void walkAnim(byte direction); 
-byte collisionDetect(byte direction);
 
 enum movement{STOP, UP, DOWN, LEFT, RIGHT, BUMPUP, BUMPDOWN, BUMPLEFT, BUMPRIGHT}; 
 enum spriteType{UPS, DOWNS, LEFTS, RIGHTS, UPMOVES, DOWNMOVES, RIGHTMOVES, LEFTMOVES};
