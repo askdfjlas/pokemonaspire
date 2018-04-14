@@ -35,6 +35,18 @@ byte getObject(byte spriteMapNumber) {
       return WALL;
     case 5: 
       return WALL;
+    case 6:
+      return WALL; 
+    case 7:
+      return WALL;
+    case 8: 
+      return WALL; 
+    case 9:
+      return FREESPACE; 
+    case 10:
+      return WALL; 
+    case 11: 
+      return FREESPACE; 
   }
 }
 

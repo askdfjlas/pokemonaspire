@@ -49,20 +49,22 @@ char* getTile(byte num);
 void loadTilemap(tileMapData T, byte* spriteMap);
 
 // Sprite maps
+
+// Bedroom
 const byte S1[] PROGMEM = 
 {1, 1, 1, 1, 1, 1, 1, 1, 1,
-1, 3, 3, 3, 3, 3, 3, 3, 1,
-1, 2, 2, 2, 2, 2, 2, 2, 1, 
-1, 2, 2, 2, 2, 2, 2, 2, 1,
-1, 2, 2, 2, 2, 2, 2, 2, 1,
-1, 2, 2, 2, 2, 2, 2, 2, 1, 
-1, 2, 2, 2, 2, 2, 2, 5, 1,
-1, 2, 2, 2, 2, 2, 2, 4, 1, 
+1, 3, 3, 6, 3, 3, 6, 3, 1,
+1, 5, 2, 2, 2, 2, 2, 11, 1, 
+1, 4, 2, 9, 10, 9, 2, 2, 1,
+1, 2, 2, 9, 9, 9, 2, 2, 1,
+1, 2, 2, 9, 9, 9, 2, 2, 1, 
+1, 8, 2, 2, 2, 2, 2, 5, 1,
+1, 7, 2, 2, 2, 2, 2, 4, 1, 
 1, 1, 1, 1, 1, 1, 1, 1, 1}; 
 
 
 // Map Data
-const tileMapData T1 PROGMEM = {9, 9, NULL, NULL, NULL, 1, 2, 0, 0, 0, 0}; 
+const tileMapData T1 PROGMEM = {9, 9, NULL, NULL, NULL, 4, 5, 0, 0, 0, 0}; 
 
 
 #endif

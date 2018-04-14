@@ -36,8 +36,23 @@ char* getTile(byte num) {
       return Tile4;
     case 4:
       return Tile5;
-     case 5:
+    case 5:
       return Tile6; 
+    case 6:
+      return Tile7; 
+    case 7:
+      return Tile8;
+    case 8: 
+      return Tile9; 
+    case 9:
+      return Tile10;
+    case 10:
+      return Tile11; 
+    case 11:
+      return Tile12; 
+    /*
+    case 12:
+      return Tile13; */
   }
 }
 
