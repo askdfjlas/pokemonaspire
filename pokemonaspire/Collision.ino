@@ -50,3 +50,14 @@ byte getObject(byte spriteMapNumber) {
   }
 }
 
+byte checkTileProperty() {
+  if(ahri.movingState == STOP) {
+    for(int i = 0; i < currentTilemap.tileProperties[0]/3; i++) {
+      if(ahri.x/16 == currentTilemap.tileProperties[3*i + 1] && ahri.y/16 == currentTilemap.tileProperties[3*i + 2])
+        return currentTilemap.tileProperties[3*i + 3];
+    }
+  }
+
+  return NONE;
+}
+

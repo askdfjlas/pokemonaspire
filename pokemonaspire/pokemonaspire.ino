@@ -9,15 +9,14 @@ void setup() {
   arduboy.begin();
   arduboy.clear();
   arduboy.setFrameRate(30);
-  loadTilemap(T1, S1); 
+  ahri.x = STARTX*16;
+  ahri.y = STARTY*16;
+  loadTilemap(T1, S1, P1); 
 }
 
 void loop() {
   if(!(arduboy.nextFrame())) return; 
   arduboy.clear();
-  getInputs(); 
-  playerMovement(); 
-  drawMap();
-  drawPlayer();
+  overworld(); 
   arduboy.display();
 }

@@ -7,9 +7,8 @@ enum interactionType{FREESPACE, WALL};
 // WALL = impassable 
 
 // Prototypes
-byte collisionDetect(byte direction); 
-byte getObject(byte spriteMapNumber);
-
-
+byte collisionDetect(byte direction);
+byte getObject(byte spriteMapNumber); // gets the interaction type
+byte checkTileProperty(); // gets the tile property of the tile the player is standing on
 
 #endif

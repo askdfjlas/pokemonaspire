@@ -7,6 +7,7 @@
 #define INPUTBUFFERTHRESHOLD 2
 
 // Prototypes
+void overworld(); // overworld code which calls other functions
 void playerMovement();  
 void drawPlayer(); 
 void walkAnim(byte direction); 

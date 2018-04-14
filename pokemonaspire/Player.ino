@@ -1,5 +1,12 @@
 #include "Player.h"
 
+void overworld() {
+  getInputs(); 
+  playerMovement(); 
+  drawMap();
+  drawPlayer();
+}
+
 void playerMovement() {
   switch(ahri.movingState) {
     case STOP: 

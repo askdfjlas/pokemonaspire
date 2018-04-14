@@ -1,6 +1,11 @@
+#define STARTX 4
+#define STARTY 5
+
 #ifndef TILEMAPS_H
 #define TILEMAPS_H
 #include <stdio.h>
+
+enum TileProperties{NONE, ITEM, EXIT1, EXIT2, EXIT3}; 
 
 // Tilemap struct (stored in program memory)
 typedef struct tileMapData {
@@ -28,6 +33,7 @@ typedef struct loadedTilemap {
   byte dimY; 
   
   byte* spriteMap;
+  byte* tileProperties; 
 
   struct Tilemap* Exit1; 
   struct Tilemap* Exit2;
@@ -62,9 +68,11 @@ const byte S1[] PROGMEM =
 1, 7, 2, 2, 2, 2, 2, 4, 1, 
 1, 1, 1, 1, 1, 1, 1, 1, 1}; 
 
-
 // Map Data
 const tileMapData T1 PROGMEM = {9, 9, NULL, NULL, NULL, 4, 5, 0, 0, 0, 0}; 
 
+// Tile Properties (format: first item = length, then: x, y, Tile Property)
+const byte P1[] PROGMEM = 
+{4, 7, 2, EXIT1}; 
 
 #endif

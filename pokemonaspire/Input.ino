@@ -1,5 +1,6 @@
 #include "Input.h"
 
+// overworld inputs
 void getInputs() {
   if(ahri.movingState == STOP) {
     if(arduboy.pressed(RIGHT_BUTTON)) { 
